@@ -8,7 +8,7 @@ export default function StudentInfo()
             <h1>Student Information</h1> 
             <p>Student Name: Prit Patel<br />
                Course: CPRG 306 A<br />
-               <Link href="https://github.com/prit-1543/cprg306-assignments.git">Github Link</Link>
+               <Link href="https://github.com/prit-1543/cprg306-assignments.git">https://github.com</Link>
             </p>         
         </div>
     </main>
