@@ -1,3 +1,4 @@
+import React from 'react';  // import the React library
 import Item from './item';  // import the Item component
 
 function ItemList() {
