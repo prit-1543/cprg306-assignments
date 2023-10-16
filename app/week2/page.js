@@ -3,12 +3,14 @@ import Link from "next/link";
 
 export default function Hello(){
   return(
-  <main>
-    <div>
-      <h1>My Shopping List</h1>
+      <main className="bg-black min-h-screen p-8">
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6">My Shopping List</h1>
+        <div className="p-4 bg-gray shadow rounded">
+        <h1>My Shopping List</h1>
         <StudentInfo />
-        <Link href="./week3">Week3</Link>
-    </div>
-  </main> 
+        </div>
+      </div>
+    </main> 
     )
 }
