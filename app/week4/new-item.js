@@ -1,7 +1,8 @@
+"use client";
+import React, { useState } from 'react';
 
-import useState from 'react';
-// @client
-const NewItem = () => {
+
+function NewItem() {
   // Initialize state variables
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -36,8 +37,7 @@ const NewItem = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="mt-1 p-2 w-full border rounded-md"
-          />
+            className="mt-1 p-2 w-full border rounded-md" />
         </div>
 
         <div className="mb-4">
@@ -50,8 +50,7 @@ const NewItem = () => {
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}
             required
-            className="mt-1 p-2 w-full border rounded-md"
-          />
+            className="mt-1 p-2 w-full border rounded-md" />
         </div>
 
         <div className="mb-4">
