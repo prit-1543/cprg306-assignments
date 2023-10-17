@@ -25,7 +25,7 @@ const NewItem = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gray-100 p-4 rounded-lg shadow-md text-black">
+        <form onSubmit={handleSubmit} className="bg-gray-700 p-4 rounded-lg shadow-md text-white">
             <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="name">Name:</label>
                 <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} required className="w-full px-3 py-2 border rounded-md text-black" />
