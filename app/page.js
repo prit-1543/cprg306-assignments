@@ -26,6 +26,9 @@ export default function Page() {
           <Link href="./week7" className="block w-full text-center bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-full">
             Week 7 Assignment
           </Link>
+          <Link href="./week8" className="block w-full text-center bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-full">
+            Week 8 Assignment
+          </Link>
         </div>
       </div>
     </main>

@@ -50,7 +50,7 @@ const ItemList = () => {
 
       <ul className="divide-y divide-gray-600">
         {sortBy === 'grouped'
-          ? Object.keys(groupedItems).sort(a).map(category => (
+          ? Object.keys(groupedItems).sort().map(category => (
               <li key={category} className="py-4">
                 <strong className="text-xl capitalize mb-2 block">{category}</strong>
                 <ul>
