@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Item from './item';
 
-function ItemList({ items }) { // receive items as a prop
+function ItemList({ items, onItemSelect }) { // receive items as a prop
 
     // Initialize state for sorting
     const [sortBy, setSortBy] = useState('name');
@@ -38,7 +38,7 @@ function ItemList({ items }) { // receive items as a prop
             </div>
             <ul className="space-y-2">
                 {sortedItems.map((item, index) => (
-                    <Item key={index} {...item} />
+                    <Item key={index} {...item} onSelect={() => onItemSelect(item)} />
                 ))}
             </ul>
         </div>

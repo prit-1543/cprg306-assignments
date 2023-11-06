@@ -13,7 +13,7 @@ function NewItem({ onAddItem }) {
     const item = { 
       name: name, 
       quantity: quantity, 
-      category: category 
+      category: category,
     };
     
     // Call the onAddItem prop with the item object
