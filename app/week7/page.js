@@ -9,30 +9,30 @@ function Page() {
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState('');
 
-  
-const handleItemSelect = (item) => {
-    const cleanedName = item.name.split(',')[0].trim().replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\�[\�-\�]|\�[\�-\�]|[\u2011-\u26FF]|\�[\�-\�])/g, '');
-    setSelectedItemName(cleanedName);
-};
-
-
   const handleAddItem = (newItem) => {
     setItems(prevItems => [...prevItems, newItem]);
   };
 
-  return (
-    
-<main className="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-8">
-    <h1 className="text-3xl font-semibold mb-6">Shopping List</h1>
-    <div className="flex">
-        <div className="mr-4">
-            <NewItem onAddItem={handleAddItem} />
-            <ItemList items={items} onItemSelect={handleItemSelect} />
-        </div>
-        <MealIdeas ingredient={selectedItemName} />
-    </div>
-</main>
+  const handleItemSelect = (itemName) => {
+    const cleanedName = itemName.split(',')[0].trim().replace(/[^a-zA-Z ]/g, "");
+    setSelectedItemName(cleanedName);
+  };
 
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1 className="text-3xl font-bold text-gray-800 mb-4">Shopping List</h1>
+      <div style={{ display: 'flex', justifyContent: 'center', width: '100%', gap: '20px' }}>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Add New Item</h2>
+          <NewItem onAddItem={handleAddItem} />
+          <ItemList items={items} onItemSelect={handleItemSelect} />
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Meal Ideas</h2>
+          <MealIdeas ingredient={selectedItemName} />
+        </div>
+      </div>
+    </div>
   );
 }
 
